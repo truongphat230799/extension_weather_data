@@ -1,4 +1,4 @@
-Blockly.Blocks["yolobit_update_data_weather "] = {
+Blockly.Blocks['yolobit_update_data_weather'] = {
     init: function () {
       this.jsonInit(
         {
@@ -42,7 +42,7 @@ Blockly.Blocks["yolobit_update_data_weather "] = {
         return code;
     };
 
-    Blockly.Blocks["yolobit_get_data_weather"] = {
+    Blockly.Blocks['yolobit_get_data_weather'] = {
         init: function () {
           this.jsonInit(
             {
