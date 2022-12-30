@@ -1,0 +1,14 @@
+{
+    "name": "WEATHER",
+    "description": "Mục mở rộng của Yolo:Bit cập nhật thời tiết",
+    "libs": [
+        "weather_wifi.py", "urequests.py"
+    ],
+    "blocks": [
+        "definition.js"
+    ],
+    "toolbox": "toolbox.xml",
+    "languages": {
+    },
+    "poster": "poster.png"
+}

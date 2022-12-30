@@ -1,0 +1,6 @@
+<xml xmlns="https://developers.google.com/blockly/xml" id="toolbox" style="display: none">
+  <category name="WEATHER" colour="#8B4030" icon="sunshine">
+    <block type="yolobit_update_data_weather"/>
+    <block type="yolobit_get_data_weather"/>
+  </category>
+</xml>
