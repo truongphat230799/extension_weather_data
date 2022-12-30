@@ -3,12 +3,12 @@
     <block type="yolobit_update_data_weather">
         <value name="LONG">
             <shadow type="text">
-                <field name="TEXT">kinh độ</field>
+                <field name="TEXT">0</field>
             </shadow>
         </value>
         <value name="LAT">
-            <shadow type="text">
-                <field name="TEXT">vĩ độ</field>
+            <shadow type="math_number">
+                <field name="NUM">0</field>
             </shadow>
         </value>
         <value name="LOCATION">
