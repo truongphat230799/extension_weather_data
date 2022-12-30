@@ -3,7 +3,7 @@ Blockly.Blocks['yolobit_update_data_weather'] = {
       this.jsonInit(
         {
             "type": "block_type",
-            "message0": "cập nhật thông tin thời tiết tại %5 tọa độ: kinh độ %1%2 vĩ độ %3%4",
+            "message0": "cập nhật thông tin thời tiết tại %5%6 tọa độ: kinh độ %1%2 vĩ độ %3%4",
             "args0": [
                 {
                   "type": "input_dummy",
@@ -18,6 +18,9 @@ Blockly.Blocks['yolobit_update_data_weather'] = {
                 {
                   "type": "input_value",
                   "name": "LAT",
+                },
+                {
+                    "type": "input_dummy",
                 },
                 {
                     "type": "input_value",
@@ -76,8 +79,7 @@ Blockly.Blocks['yolobit_update_data_weather'] = {
                     ]
                   }
                 ],
-                "previousStatement": null,
-                "nextStatement": null,
+                "output": null,
                 "colour": "#8B4030",
                 "tooltip": "",
                 "helpUrl": ""
