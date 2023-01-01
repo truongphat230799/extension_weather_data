@@ -39,6 +39,9 @@ Blockly.Blocks['yolobit_update_data_weather'] = {
         }
     };
     Blockly.Python['yolobit_update_data_weather'] = function(block) {
+        Blockly.Python.definitions_['import_urequests'] = 'import urequests';
+        Blockly.Python.definitions_['import_gc'] = 'import gc';
+        Blockly.Python.definitions_['import_yolobit'] = 'from yolobit import *';
         var long = Blockly.Python.valueToCode(block, 'LONG', Blockly.Python.ORDER_ATOMIC);
         var lat = Blockly.Python.valueToCode(block, 'LAT', Blockly.Python.ORDER_ATOMIC);
         var location = Blockly.Python.valueToCode(block, 'LOCATION', Blockly.Python.ORDER_ATOMIC);
@@ -86,10 +89,13 @@ Blockly.Blocks['yolobit_update_data_weather'] = {
             }
         };
     Blockly.Python['yolobit_get_data_weather'] = function(block) {
-    var dropdown_data_weather = block.getFieldValue('data_weather');
+        Blockly.Python.definitions_['import_urequests'] = 'import urequests';
+        Blockly.Python.definitions_['import_gc'] = 'import gc';
+        Blockly.Python.definitions_['import_yolobit'] = 'from yolobit import *';
+        var dropdown_data_weather = block.getFieldValue('data_weather');
     // TODO: Assemble Python into code variable.
-    var code = "ujson.loads(data)['main']." + dropdown_data_weather + "\n";
-    return [code, Blockly.Python.ORDER_NONE];
+        var code = "ujson.loads(data)['main']." + dropdown_data_weather + "\n";
+        return [code, Blockly.Python.ORDER_NONE];
     };
 
 
