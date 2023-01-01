@@ -3,7 +3,7 @@ Blockly.Blocks['yolobit_update_data_weather'] = {
       this.jsonInit(
         {
             "type": "block_type",
-            "message0": "cập nhật thời tiết %5%6 tọa độ: kinh độ %1%2 vĩ độ %3%4",
+            "message0": "cập nhật thời tiết tọa độ: kinh độ %1%2 vĩ độ %3%4",
             "args0": [
                 {
                   "type": "input_dummy",
@@ -20,13 +20,6 @@ Blockly.Blocks['yolobit_update_data_weather'] = {
                     "type": "input_value",
                     "name": "LAT",
                     "check": "Number"
-                },
-                {
-                    "type": "input_dummy",
-                },
-                {
-                    "type": "input_value",
-                    "name": "LOCATION",
                 }
             ],
             "previousStatement": null,
@@ -46,7 +39,7 @@ Blockly.Blocks['yolobit_update_data_weather'] = {
         var lat = Blockly.Python.valueToCode(block, 'LAT', Blockly.Python.ORDER_ATOMIC);
         var location = Blockly.Python.valueToCode(block, 'LOCATION', Blockly.Python.ORDER_ATOMIC);
         // TODO: Assemble Python into code variable.
-        var code = "gc.collect()\n"+"http_response = urequests.get('https://weather1.npnlab.com/weather/getdata?code="+location+"&lon="+long+"&lat="+lat+"')\n" + "data = http_response.json().get('data')\n";
+        var code = "gc.collect()\n"+"http_response = urequests.get('https://weather1.npnlab.com/weather/getdata?code=VN&lon="+long+"&lat="+lat+"')\n" + "data = http_response.json().get('data')\n";
         return code;
     };
 
@@ -97,8 +90,6 @@ Blockly.Blocks['yolobit_update_data_weather'] = {
         var code = "ujson.loads(data)['main']." + dropdown_data_weather + "\n";
         return [code, Blockly.Python.ORDER_NONE];
     };
-
-
 
 
 
