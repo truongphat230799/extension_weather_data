@@ -39,8 +39,8 @@ Blockly.Blocks['yolobit_update_data_weather'] = {
         }
     };
     Blockly.Python['yolobit_update_data_weather'] = function(block) {
-        var long = block.getFieldValue('LONG')
-        var lat = block.getFieldValue('LAT')
+        var long = Blockly.Python.valueToCode(block, 'LONG', Blockly.Python.ORDER_ATOMIC);
+        var lat = Blockly.Python.valueToCode(block, 'LAT', Blockly.Python.ORDER_ATOMIC);
         var location = Blockly.Python.valueToCode(block, 'LOCATION', Blockly.Python.ORDER_ATOMIC);
         // TODO: Assemble Python into code variable.
         var code = "gc.collect()\n"+"http_response = urequests.get('https://weather1.npnlab.com/weather/getdata?code="+location+"&lon="+long+"&lat="+lat+"')\n" + "data = http_response.json().get('data')\n";
