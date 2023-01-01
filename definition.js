@@ -9,14 +9,14 @@ Blockly.Blocks['yolobit_update_data_weather'] = {
                   "type": "input_dummy",
                 },
                 {
-                  "type": "input_value",
+                  "type": "field_number",
                   "name": "LONG",
                 },
                 {
                     "type": "input_dummy",
                   },
                 {
-                  "type": "input_value",
+                  "type": "field_number",
                   "name": "LAT",
                 },
                 {
