@@ -1,5 +1,5 @@
 {
-    "name": "WEATHER",
+    "name": "THỜI TIẾT",
     "description": "Mục mở rộng của Yolo:Bit cập nhật thời tiết",
     "libs": [
         "weather_wifi.py", "urequests.py"
