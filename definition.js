@@ -91,7 +91,7 @@ Blockly.Blocks['yolobit_update_data_weather'] = {
         var dropdown_data_weather = block.getFieldValue('data_weather');
     // TODO: Assemble Python into code variable.
         var code = "";
-        if (dropdown_data == "DESCRIPTION")
+        if (dropdown_data_weather == "DESCRIPTION")
           code = "description";
         else 
           code = "ujson.loads(data)['main']." + dropdown_data_weather + "\n";
