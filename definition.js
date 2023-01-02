@@ -67,7 +67,7 @@ Blockly.Blocks['yolobit_update_data_weather'] = {
                       ],
                       [
                         "tốc độ gió",
-                        "get('speed')"
+                        "WINDSPEED"
                       ],
                       [
                         "mô tả thời tiết",
@@ -93,7 +93,9 @@ Blockly.Blocks['yolobit_update_data_weather'] = {
         var code = "";
         if (dropdown_data_weather == "DESCRIPTION")
           code = "description";
-        else 
+        else if (dropdown_data_weather == "WINDSPEED")
+          code = "ujson.loads(data)['wind'].get('speed')";
+        else
           code = "ujson.loads(data)['main']." + dropdown_data_weather + "\n";
         return [code, Blockly.Python.ORDER_NONE];
     };
