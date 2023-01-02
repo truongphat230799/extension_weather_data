@@ -47,7 +47,7 @@ Blockly.Blocks['yolobit_update_data_weather'] = {
           this.jsonInit(
             {
                 "type": "data_weather",
-                "message0": "dữ liệu %1",
+                "message0": "thông tin %1",
                 "args0": [
                   {
                     "type": "field_dropdown",
